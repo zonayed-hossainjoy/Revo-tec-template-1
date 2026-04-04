@@ -1,30 +1,32 @@
 
+import { useLanguage } from '../context/LanguageContext';
 
 const Products = () => {
+  const { t } = useLanguage();
   const products = [
     {
-      category: 'CONTROL SERIES',
-      title: 'LOGIC CONTROLLER',
+      category: t('products.controlSeries'),
+      title: t('products.logicController'),
       name: 'CONTROL TWO',
-      status: 'AVAILABLE GLOBALLY',
+      status: t('products.available'),
       num: '01',
       image: '/images/CONTROL MINI (1) 1.png',
       imgWidth: 'w-[160px]'
     },
     {
-      category: 'VIEW SERIES',
-      title: 'INTERFACE',
+      category: t('products.viewSeries'),
+      title: t('products.interface'),
       name: 'CONTROL VIEW',
-      status: 'AVAILABLE GLOBALLY',
+      status: t('products.available'),
       num: '02',
       image: '/images/view.png',
       imgWidth: 'w-[200px]'
     },
     {
-      category: 'SENSOR SERIES',
-      title: 'SENSORS',
+      category: t('products.sensorSeries'),
+      title: t('products.sensors'),
       name: 'AF001-PRO',
-      status: 'AVAILABLE GLOBALLY',
+      status: t('products.available'),
       num: '03',
       image: '/images/mockup.png',
       imgWidth: 'w-[180px]'
@@ -38,10 +40,10 @@ const Products = () => {
         {/* Header */}
         <div className="flex flex-col mb-16">
           <h2 className="text-4xl font-bold text-[#111827] dark:text-white tracking-tight mb-2 transition-colors duration-300">
-            Our <span className="text-primary">Product</span> Series
+            {t('products.titleP1')} <span className="text-primary">{t('products.titleP2')}</span> {t('products.titleP3')}
           </h2>
           <span className="text-xl text-gray-600 dark:text-gray-400 font-normal transition-colors duration-300">
-            (Smart tech for modern living.)
+            {t('products.subtitle')}
           </span>
         </div>
 

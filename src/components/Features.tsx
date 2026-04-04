@@ -1,21 +1,23 @@
-
+import { useLanguage } from '../context/LanguageContext';
 
 const Features = () => {
+  const { t } = useLanguage();
+
   const topCards = [
     {
       icon: '/images/icons/Vector.png', 
       iconDark: '/images/icons/white (4).png',
-      text: 'Tailor-made technology solutions for companies and demanding private customers.'
+      text: t('features.card1Text')
     },
     {
       icon: '/images/icons/Group.png', 
       iconDark: '/images/icons/white (3).png',
-      text: 'Hardware and software from our own development – reliable and future-proof.'
+      text: t('features.card2Text')
     },
     {
       icon: '/images/icons/Group 9.png', 
       iconDark: '/images/icons/white (1).png',
-      text: 'Planning, development, and support from Austria – To use worldwide.'
+      text: t('features.card3Text')
     }
   ];
 
@@ -23,12 +25,12 @@ const Features = () => {
     {
       icon: '/images/icons/Vector-1.png', 
       iconDark: '/images/icons/white (5).png',
-      text: 'Modern cloud and app solutions for simple and secure remote control.'
+      text: t('features.card4Text')
     },
     {
       icon: '/images/icons/Group 10.png', 
       iconDark: '/images/icons/white (2).png',
-      text: 'high-performance retrofitting for existing systems without the complexity.'
+      text: t('features.card5Text')
     }
   ];
 
@@ -38,9 +40,9 @@ const Features = () => {
         
         {/* Header */}
         <div className="flex flex-col md:flex-row items-baseline mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white tracking-tight transition-colors duration-300">Why Revo-Tec?</h2>
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white tracking-tight transition-colors duration-300">{t('features.title')}</h2>
           <span className="text-xl text-gray-600 dark:text-gray-400 md:ml-3 mt-2 md:mt-0 font-normal transition-colors duration-300">
-            (The Engineering Excellence)
+            {t('features.subtitle')}
           </span>
         </div>
 

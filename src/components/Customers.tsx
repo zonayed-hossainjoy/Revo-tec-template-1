@@ -1,6 +1,8 @@
 
+import { useLanguage } from '../context/LanguageContext';
 
 const Customers = () => {
+  const { t } = useLanguage();
   // Array of company logos from the Support company folder
   const baseLogos = [
     '/images/Support company/dimenxen_logo_clean.png',
@@ -20,9 +22,9 @@ const Customers = () => {
         
         {/* Left Side: Text Block */}
         <div className="w-full md:w-[35%] mb-10 md:mb-0 relative z-20 bg-[#050A10]">
-          <h2 className="text-white text-[32px] font-bold mb-2 tracking-tight">Our Customers</h2>
+          <h2 className="text-white text-[32px] font-bold mb-2 tracking-tight">{t('customers.title')}</h2>
           <p className="text-gray-400 text-[15px] leading-relaxed max-w-[280px]">
-            Trusted by industry leaders to deliver seamless digital experiences.
+            {t('customers.subtitle')}
           </p>
         </div>
 

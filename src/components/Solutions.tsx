@@ -1,29 +1,31 @@
 
+import { useLanguage } from '../context/LanguageContext';
 
 const Solutions = () => {
+  const { t } = useLanguage();
   const cards = [
     {
-      category: 'RESIDENTIAL',
-      title: 'Smart Residential Heating',
-      desc: 'Intelligent temperature control for ultimate home comfort and energy savings.',
+      category: t('solutions.card1.category'),
+      title: t('solutions.card1.title'),
+      desc: t('solutions.card1.desc'),
       image: 'https://plus.unsplash.com/premium_photo-1661963270682-4b4857b6cda2?q=80&w=800&auto=format&fit=crop'
     },
     {
-      category: 'ENTERPRISE',
-      title: 'Commercial Building Automation',
-      desc: 'Seamless central management for modern offices and large-scale infrastructures.',
+      category: t('solutions.card2.category'),
+      title: t('solutions.card2.title'),
+      desc: t('solutions.card2.desc'),
       image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80'
     },
     {
-      category: 'INDUSTRIAL',
-      title: 'Industrial IoT Monitoring',
-      desc: 'Real-time data visualization and sensor-driven feedback for critical systems.',
+      category: t('solutions.card3.category'),
+      title: t('solutions.card3.title'),
+      desc: t('solutions.card3.desc'),
       image: 'https://images.unsplash.com/photo-1647427060118-4911c9821b82?auto=format&fit=crop&w=800&q=80'
     },
     {
-      category: 'PROPERTY MGMT',
-      title: 'Remote Vacation Home Management',
-      desc: 'Secure remote access to monitor and manage your properties from anywhere.',
+      category: t('solutions.card4.category'),
+      title: t('solutions.card4.title'),
+      desc: t('solutions.card4.desc'),
       image: 'https://plus.unsplash.com/premium_photo-1727509754856-dfb3ff9bcbb4?auto=format&fit=crop&w=800&q=80',
       imageClass: 'object-[75%_center]'
     }
@@ -36,7 +38,7 @@ const Solutions = () => {
         {/* Header */}
         <div className="mb-12">
           <h2 className="text-[34px] font-bold text-gray-900 dark:text-white tracking-tight transition-colors duration-300">
-            Our <span className="text-primary">Solutions</span> in Action.
+            {t('solutions.titleP1')} <span className="text-primary">{t('solutions.titleP2')}</span> {t('solutions.titleP3')}
           </h2>
         </div>
 

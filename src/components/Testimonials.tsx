@@ -1,49 +1,53 @@
 import { useState } from 'react';
-
-const baseTestimonials = [
-  {
-    quote: "Revo-Tec systems stand out for their simple integration and high build quality. We were particularly impressed by how easily we could retrofit our existing setup. It's been running rock-solid since day one.",
-    name: 'Julia Mayer',
-    role: 'Homeowner',
-    avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026704d'
-  },
-  {
-    quote: "We were looking for a reliable, long-term solution that met professional industrial standards. Revo-Tec delivered exactly that—technically clean implementation and absolute stability in ongoing operations.",
-    name: 'Max Schmidt',
-    role: 'Technical Director, Schmidt Industries',
-    avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026704e'
-  },
-  {
-    quote: "The systems are well-thought-out, robust, and easy to integrate into existing infrastructures. It's the perfect balance of advanced technology and practical usability.",
-    name: 'Alexander Berger',
-    role: 'Project Manager, Berger Solutions',
-    avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026704f'
-  },
-  {
-    quote: "Managing multiple residential units became significantly easier with Revo-Tec. The remote monitoring capabilities allow us to handle climate control and energy efficiency across our entire portfolio from a single dashboard. A total game-changer for our operations.",
-    name: 'Sarah Jenkins',
-    role: 'Property Manager',
-    avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026704g'
-  },
-  {
-    quote: "As an engineer, I appreciate the transparency of the Revo-Tec architecture. The hardware is incredibly well-engineered, and the API integration is seamless. It's rare to find a system that is this powerful yet so straightforward to deploy.",
-    name: 'David Chen',
-    role: 'Lead Hardware Engineer',
-    avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026704h'
-  },
-  {
-    quote: "We integrate Revo-Tec into our green building projects because of their commitment to energy precision. Their sensors provide the exact data needed to optimize building performance, and the minimalist design of the View Series tablets fits perfectly into our modern interiors.",
-    name: 'Marcus Thorne',
-    role: 'Sustainable Architect',
-    avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026704i'
-  }
-];
-
-// Duplicate to provide enough content for "View More" pagination
-const allTestimonials = [...baseTestimonials, ...baseTestimonials, ...baseTestimonials];
+import { useLanguage } from '../context/LanguageContext';
 
 const Testimonials = () => {
+  const { t } = useLanguage();
   const [visibleCount, setVisibleCount] = useState(6);
+
+  const baseTestimonials = [
+    {
+      quote: t('testimonials.t1Quote'),
+      name: 'Julia Mayer',
+      role: t('testimonials.t1Role'),
+      avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026704d'
+    },
+    {
+      quote: t('testimonials.t2Quote'),
+      name: 'Max Schmidt',
+      role: t('testimonials.t2Role'),
+      avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026704e'
+    },
+    {
+      quote: t('testimonials.t3Quote'),
+      name: 'Alexander Berger',
+      role: t('testimonials.t3Role'),
+      avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026704f'
+    },
+    {
+      quote: t('testimonials.t4Quote'),
+      name: 'Sarah Jenkins',
+      role: t('testimonials.t4Role'),
+      avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026704g'
+    },
+    {
+      quote: t('testimonials.t5Quote'),
+      name: 'David Chen',
+      role: t('testimonials.t5Role'),
+      avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026704h'
+    },
+    {
+      quote: t('testimonials.t6Quote'),
+      name: 'Marcus Thorne',
+      role: t('testimonials.t6Role'),
+      avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026704i'
+    }
+  ];
+
+  // Duplicate to provide enough content for "View More" pagination
+  const allTestimonials = [...baseTestimonials, ...baseTestimonials, ...baseTestimonials];
+
+
 
   // Manual Masonry Distribution
   const col1: typeof allTestimonials = [];
@@ -72,12 +76,12 @@ const Testimonials = () => {
           </svg>
         ))}
       </div>
-      
+
       {/* Quote */}
       <p className="text-gray-700 dark:text-gray-300 text-[15px] leading-relaxed mb-8 transition-colors duration-300">
         "{test.quote}"
       </p>
-      
+
       {/* Author */}
       <div className="flex items-center gap-4 mt-auto">
         <img src={test.avatar} alt={test.name} className="w-12 h-12 rounded-full object-cover shadow-sm" />
@@ -92,11 +96,12 @@ const Testimonials = () => {
   return (
     <section className="w-full bg-white dark:bg-transparent transition-colors duration-300 pt-20 pb-20 relative">
       <div className="max-w-[1240px] mx-auto px-5 relative">
-        
+
         {/* Header */}
         <div className="text-center mb-16 relative z-30">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white tracking-tight transition-colors duration-300">
-            Trusted by <span className="text-primary">10,000+</span> Users<br/>Worldwide.
+            {t('testimonials.titleP1')} <span className="text-primary">{t('testimonials.titleP2')}</span><br />
+            {t('testimonials.titleP3')} {t('testimonials.titleP4')}
           </h2>
         </div>
 
@@ -116,11 +121,11 @@ const Testimonials = () => {
           {hasMore && (
             <div className="absolute bottom-0 left-0 w-full h-[400px] bg-gradient-to-t from-white via-white/90 dark:from-[#0a0f18] dark:via-[#0a0f18]/90 to-transparent flex items-end justify-center pb-2 z-30 pointer-events-none transition-colors duration-300">
               {/* View More Button */}
-              <button 
+              <button
                 onClick={handleViewMore}
                 className="pointer-events-auto flex items-center gap-2 bg-white dark:bg-[#111827] border border-gray-200 dark:border-gray-700 shadow-xl dark:shadow-none rounded-full px-8 py-3 mb-4 hover:bg-gray-50 dark:hover:bg-[#1f2937] hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
               >
-                <span className="font-semibold text-gray-900 dark:text-white transition-colors duration-300">View More</span>
+                <span className="font-semibold text-gray-900 dark:text-white transition-colors duration-300">{t('testimonials.viewMore')}</span>
                 <svg className="w-5 h-5 text-gray-900 dark:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                 </svg>

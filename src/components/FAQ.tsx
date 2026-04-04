@@ -1,33 +1,35 @@
 import { useState } from 'react';
-
-const faqData = [
-  {
-    id: 1,
-    question: "1. Does my heating system need to be completely replaced?",
-    answer: "Answer: No. Our systems are designed for retrofitting. Existing systems can usually be made smart without a complete replacement."
-  },
-  {
-    id: 2,
-    question: "2. Is the system also suitable for holiday apartments?",
-    answer: "Yes, it is perfectly suited for holiday apartments. You can remotely monitor and adjust the climate ensuring optimized energy usage while away."
-  },
-  {
-    id: 3,
-    question: "3. Does the system also work without internet?",
-    answer: "Local physical controls work continuously without an internet connection. However, remote app access and cloud-based automation features do require active internet."
-  },
-  {
-    id: 4,
-    question: "4. How does the remote control of my heating work?",
-    answer: "Our intelligent hardware integrates with your existing boiler or thermostat setup. It communicates securely via our cloud infrastructure directly back to your mobile app."
-  }
-];
+import { useLanguage } from '../context/LanguageContext';
 
 const FAQ = () => {
+  const { t } = useLanguage();
   const [expandedIds, setExpandedIds] = useState<number[]>([1]);
   const [activeTab, setActiveTab] = useState("All");
 
-  const tabs = ["All", "Smart Heating & Remote Control", "App & Control", "Sensors"];
+  const faqData = [
+    {
+      id: 1,
+      question: t('faq.q1.q'),
+      answer: t('faq.q1.a')
+    },
+    {
+      id: 2,
+      question: t('faq.q2.q'),
+      answer: t('faq.q2.a')
+    },
+    {
+      id: 3,
+      question: t('faq.q3.q'),
+      answer: t('faq.q3.a')
+    },
+    {
+      id: 4,
+      question: t('faq.q4.q'),
+      answer: t('faq.q4.a')
+    }
+  ];
+
+  const tabs = [t('faq.tabs.all'), t('faq.tabs.heating'), t('faq.tabs.app'), t('faq.tabs.sensors')];
 
   const toggleFaq = (id: number) => {
     setExpandedIds(prev => 
@@ -84,17 +86,17 @@ const FAQ = () => {
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-12">
           <div>
             <h2 className="text-[32px] text-gray-900 dark:text-white font-normal tracking-tight mb-1 transition-colors duration-300">
-              Frequent Questions (<span className="text-primary font-bold">FAQ</span>s)
+              {t('faq.titleP1')}<span className="text-primary font-bold">{t('faq.titleP2')}</span>{t('faq.titleP3')}
             </h2>
             <p className="text-gray-900 dark:text-gray-300 text-lg transition-colors duration-300">
-              you've got questions, we've got answers.
+              {t('faq.subtitle')}
             </p>
           </div>
           
           <div className="relative w-full lg:w-[450px]">
             <input 
               type="text" 
-              placeholder="ARE YOU LOOKING FOR SOMETHING SPECIFIC?"
+              placeholder={t('faq.searchPlaceholder')}
               className="w-full bg-[#FAFAFA] dark:bg-[#111827] border border-gray-200 dark:border-gray-800 text-gray-500 dark:text-gray-300 text-xs font-semibold tracking-wide rounded-full py-4 pl-14 pr-6 outline-none focus:border-primary transition-colors duration-300"
             />
             <svg className="w-5 h-5 text-gray-400 dark:text-gray-500 absolute left-6 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
