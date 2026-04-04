@@ -18,7 +18,7 @@ export const en = {
     resources: "Resources"
   },
   hero: {
-    bgText: "Revo-tec",
+    bgText: "Revo-Tec",
     introP1: "is an",
     introP2: "Austrian",
     introP3: "pioneer in high-end Smart Home and IoT engineering. We combine industrial-grade reliability with intuitive design to give you total control over your environment.",
