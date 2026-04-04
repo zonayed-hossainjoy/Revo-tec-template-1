@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@import "tailwindcss/preflight" layer(base);
+@import "tailwindcss/utilities" layer(utilities);
+
+@custom-variant dark (&:is(.dark *));
+@theme {
+  --color-primary: #99BB42;
+  --animate-scroll: scroll 30s linear infinite;
+  --animate-scroll-fast: scroll 15s linear infinite;
+
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50%)); }
+  }
+}
+
+@layer base {
+  body {
+    background-color: white;
+    color: #111827; /* gray-900 */
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}

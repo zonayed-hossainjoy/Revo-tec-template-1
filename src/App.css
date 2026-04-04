@@ -1,0 +1,51 @@
+.app-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app-header {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+.app-content {
+  padding: 2rem 0;
+}
+
+.intro-card {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+.intro-card h2 {
+  margin-top: 0;
+  color: #646cff;
+}
+
+.intro-card code {
+  color: #fb8c00;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+.app-footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #4a4a4a;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+@media (prefers-color-scheme: light) {
+  .intro-card {
+    background-color: #f1f1f1;
+    color: #213547;
+  }
+}
