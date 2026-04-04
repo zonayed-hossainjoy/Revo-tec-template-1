@@ -74,7 +74,8 @@ export const en = {
       category: "PROPERTY MGMT",
       title: "Remote Vacation Home Management",
       desc: "Secure remote access to monitor and manage your properties from anywhere."
-    }
+    },
+    viewMoreSolutions: "View more solutions"
   },
   products: {
     titleP1: "Our",

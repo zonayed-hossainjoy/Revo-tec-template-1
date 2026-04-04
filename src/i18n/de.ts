@@ -74,7 +74,8 @@ export const de = {
       category: "IMMOBILIEN-MGMT",
       title: "Fernverwaltung von Ferienhäusern",
       desc: "Sicherer Fernzugriff zur Überwachung und Verwaltung Ihrer Immobilien von überall."
-    }
+    },
+    viewMoreSolutions: "Weitere Lösungen ansehen"
   },
   products: {
     titleP1: "Unsere",

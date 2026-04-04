@@ -90,6 +90,13 @@ const Solutions = () => {
             </div>
           ))}
         </div>
+        
+        {/* Bottom Link */}
+        <div className="mt-12 text-right w-full pr-4">
+          <a href="#" className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 hover:underline transition-colors text-sm font-medium">
+            {t('solutions.viewMoreSolutions')}
+          </a>
+        </div>
 
       </div>
     </section>
