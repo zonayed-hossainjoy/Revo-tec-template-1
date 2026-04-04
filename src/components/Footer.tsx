@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Footer = () => {
   const quickLinks = ["Home", "Products", "Case Studies", "About Us", "Support", "Contact Us"];
   const productInfo = ["Revo-Tec App", "CONTROL SERIE", "VIEW SERIE", "SENSOR SERIE", "Product Catalog"];
