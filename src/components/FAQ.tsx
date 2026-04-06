@@ -76,7 +76,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="w-full bg-white dark:bg-transparent transition-colors duration-300 pb-32 pt-12 relative">
+    <section className="w-full bg-white dark:bg-transparent transition-colors duration-300 pb-10 pt-12 relative">
       <div className="max-w-[1240px] mx-auto px-5">
         
         {/* Top border line */}

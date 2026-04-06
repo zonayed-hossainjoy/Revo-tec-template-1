@@ -138,6 +138,20 @@ export const en = {
       a: "Our intelligent hardware integrates with your existing boiler or thermostat setup. It communicates securely via our cloud infrastructure directly back to your mobile app."
     }
   },
+  contact: {
+    title: "Get in Touch",
+    subtitle: "Have questions or feedback? Feel free to contact us using the form below or through our contact details.",
+    sendMessages: "Send Messages",
+    contactLinks: "Contact Links",
+    fullName: "Full Name",
+    emailLabel: "Email",
+    subject: "Subject",
+    message: "Message",
+    sendMessage: "Send Message",
+    social: "Social",
+    emailTitle: "Email",
+    call: "Call"
+  },
   customers: {
     title: "Our Customers",
     subtitle: "Trusted by industry leaders to deliver seamless digital experiences."

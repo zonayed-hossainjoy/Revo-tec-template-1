@@ -9,6 +9,7 @@ import Solutions from './components/Solutions';
 import Testimonials from './components/Testimonials';
 import CTA from './components/CTA';
 import FAQ from './components/FAQ';
+import Contact from './components/Contact';
 import StartControlling from './components/StartControlling';
 import Footer from './components/Footer';
 import { ThemeProvider } from './context/ThemeContext';
@@ -68,6 +69,7 @@ function App() {
             <Testimonials />
             <CTA />
             <FAQ />
+            <Contact />
             <StartControlling />
             <Footer />
           </div>

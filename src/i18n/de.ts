@@ -138,6 +138,20 @@ export const de = {
       a: "Unsere intelligente Hardware wird in Ihre bestehende Boiler- oder Thermostatkonfiguration integriert. Sie kommuniziert sicher über unsere Cloud-Infrastruktur direkt mit Ihrer mobilen App."
     }
   },
+  contact: {
+    title: "Kontakt aufnehmen",
+    subtitle: "Haben Sie Fragen oder Feedback? Kontaktieren Sie uns gerne über das untenstehende Formular oder unsere Kontaktdaten.",
+    sendMessages: "Nachrichten senden",
+    contactLinks: "Kontakt-Links",
+    fullName: "Vollständiger Name",
+    emailLabel: "E-Mail",
+    subject: "Betreff",
+    message: "Nachricht",
+    sendMessage: "Nachricht senden",
+    social: "Soziale Medien",
+    emailTitle: "E-Mail",
+    call: "Anrufen"
+  },
   customers: {
     title: "Unsere Kunden",
     subtitle: "Von Branchenführern vertraut, um nahtlose digitale Erlebnisse zu liefern."
