@@ -59,7 +59,7 @@ const Contact = () => {
                       placeholder="Zonayed Hossain"
                       value={formData.fullName}
                       onChange={handleChange}
-                      className="w-full bg-transparent text-gray-800 dark:text-gray-200 text-[14px] outline-none placeholder:text-gray-400 dark:placeholder:text-gray-500 transition-colors duration-300"
+                      className="w-full bg-transparent text-gray-800 dark:text-gray-200 text-[14px] outline-none placeholder:text-gray-400/50 dark:placeholder:text-gray-500/50 transition-colors duration-300"
                     />
                   </fieldset>
 
@@ -71,7 +71,7 @@ const Contact = () => {
                       placeholder="joyhossain1694@gmail.com"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full bg-transparent text-gray-800 dark:text-gray-200 text-[14px] outline-none placeholder:text-gray-400 dark:placeholder:text-gray-500 transition-colors duration-300"
+                      className="w-full bg-transparent text-gray-800 dark:text-gray-200 text-[14px] outline-none placeholder:text-gray-400/50 dark:placeholder:text-gray-500/50 transition-colors duration-300"
                     />
                   </fieldset>
                 </div>
@@ -85,7 +85,7 @@ const Contact = () => {
                     placeholder="Want to know about......."
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full bg-transparent text-gray-800 dark:text-gray-200 text-[14px] outline-none placeholder:text-gray-400 dark:placeholder:text-gray-500 transition-colors duration-300"
+                    className="w-full bg-transparent text-gray-800 dark:text-gray-200 text-[14px] outline-none placeholder:text-gray-400/50 dark:placeholder:text-gray-500/50 transition-colors duration-300"
                   />
                 </fieldset>
 
@@ -98,7 +98,7 @@ const Contact = () => {
                     placeholder="Want to know about......."
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full bg-transparent text-gray-800 dark:text-gray-200 text-[14px] outline-none resize-none placeholder:text-gray-400 dark:placeholder:text-gray-500 transition-colors duration-300"
+                    className="w-full bg-transparent text-gray-800 dark:text-gray-200 text-[14px] outline-none resize-none placeholder:text-gray-400/50 dark:placeholder:text-gray-500/50 transition-colors duration-300"
                   />
                 </fieldset>
 
